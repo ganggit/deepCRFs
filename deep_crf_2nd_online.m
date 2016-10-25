@@ -286,5 +286,7 @@ function [pred_T, model] = deep_crf_2nd_online(train_X, train_T, test_X, test_T,
             disp([' - test error: ' num2str(err / len)]);
         end
     end
-    model = mean_model;
+    if average_models
+        model = mean_model;
+    end
     

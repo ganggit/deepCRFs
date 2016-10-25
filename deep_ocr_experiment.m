@@ -97,7 +97,7 @@ function err = deep_ocr_experiment(numhids, lambda, rho, window)
         layers.lambda2 = 0.2;%0.5 % lambda2;
 
         % Perform learning and predictions using deepCRFs
-        pred_T = deep_crf_2nd_online(train_X, train_T, test_X, test_T, 'drbm_continuous', layers, false, base_eta, rho);
+        pred_T = deep_crf_2nd_online(train_X, train_T, test_X, test_T, 'drbm_continuous', layers, false, base_eta, rho, 50);
                 
     
         % Measure per-character tagging error
